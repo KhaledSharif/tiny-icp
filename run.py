@@ -1,5 +1,4 @@
 import numpy as np
-import math
 
 # axis sequences for Euler angles
 NEXT_AXIS = [1, 2, 0, 1]
@@ -28,8 +27,8 @@ def euler_matrix(ai, aj, ak, axes='sxyz'):
     if parity:
         ai, aj, ak = -ai, -aj, -ak
 
-    si, sj, sk = math.sin(ai), math.sin(aj), math.sin(ak)
-    ci, cj, ck = math.cos(ai), math.cos(aj), math.cos(ak)
+    si, sj, sk = np.sin(ai), np.sin(aj), np.sin(ak)
+    ci, cj, ck = np.cos(ai), np.cos(aj), np.cos(ak)
     cc, cs = ci * ck, ci * sk
     sc, ss = si * ck, si * sk
 
